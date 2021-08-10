@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta lang="pl-PL">
+	<title> Kpop Groups </title>
+	<link rel="shortcut icon" href="../../grafiki/ikona.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+      <link rel="stylesheet" type="text/css" href="../../grafiki/lobster-regular.ttf">
+</head>
+<body>
+	<header onload="zegarek()">
+		<a href="../../kpop.html"><img src="../../grafiki/ikona_tytulowa.png" alt="ikona_tytulowa" class="ikonka"/></a>
+	  	<ol>
+          <li><a href="kpop.html">Grupy Kpop</a>
+            <ul>
+                <li><a href="boysbands.php">Boysbandy</a></li>
+                <li><a href="girlsbands.php">Girlsbandy</a></li>
+                <li><a href="Co-edgroups.php">Grupy Co-ed</a></li>
+            </ul>
+          </li>
+
+          <li><a href="solists.html">Soliści Kpop</a>
+            <ul>
+                <li><a href="woman_solist.php">Kobiety</a></li>
+                <li><a href="man_solist.php">Mężczyźni</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../cpop/cpop.html">Cpop</a>
+            <ul>
+              <li><a href="../cpop/cpop_boysbands.php">Boysbandy</a></li>
+              <li><a href="../cpop/cpop_girlsbands.php">Girlsbandy</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../jpop/jpop.html">Jpop</a>
+            <ul>
+                <li><a href="../jpop/jpop_boysbands.php">Boysbandy</a></li>
+                <li><a href="../jpop/jpop_girlsbands.php">Girlsbandy</a></li>
+            </ul>
+          </li>
+      </ol>
+      <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    	<div id="blok">
+        <marquee direction="left" scrollamount="2" scrolldelay="1" onmouseover="this.stop()" onmouseout="this.start()" style="color: white;">
+          Witaj na stronie poświęconej muzyce z Azji! Znajdziesz tu najważniejsze informacje o osobach z tego rynku muzycznego. Wykonała: DM 4G
+        </marquee>  
+    	</div>
+	</header>
+	<div class="main">
+      <table style="font-size: 24px; text-decoration: none; margin-left: 5%; margin-top: 10%;">
+            <tr>
+              <td> <a href="boysbands.php"><img src="../../grafiki/kpop_bb.jpg" style="max-width: 400px; max-height: 600px;" alt="kpop_boys"></a></td>
+              <td> <a href="girlsbands.php"><img src="../../grafiki/kpop_gb.png" style="max-width: 400px;max-height: 600px;" alt="kpop_girl"></a></td>
+              <td> <a href="Co-edgroups.php"><img src="../../grafiki/kpop_coed.jpg" style="max-width: 400px; max-height: 600px;" alt="kpop_coed"></a></td>
+            </tr>
+            <tr> 
+              <td><a href="boysbands.php"><center>Boysbandy</center></a> </td>
+              <td><a href="girlsbands.php"><center>Girlsbandy</center></a></td>
+              <td><a href="Co-edgroups.php"><center>Grupy Co-ed</center></a></td>
+            </tr>
+      </table>
+	</div>
+	<div>
+		<a href="../../../index.html" style="margin-left: 30%; position: absolute;"> <img src="../../grafiki/choose.png" alt="powrot_do_strony_glownej"/> </a> 
+	  </div>
+  <script type="text/javascript">
+    function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+  </script>
+</body>
+</html>

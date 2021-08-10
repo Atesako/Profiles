@@ -1,0 +1,173 @@
+body{
+	background-color:#50BAFF;
+  font-family: lobster;
+}
+header{
+	min-height: 150px;
+	z-index: 1;
+	background: linear-gradient(90deg, rgba(0,57,92,0.9122023809523809) 0%, rgba(0,115,172,0.8225665266106442) 50%, rgba(0,164,255,0.6797093837535014) 100%);
+	display: block;
+	border-radius: 10px;
+}
+header.ikonka{
+	position: left;
+	padding-left: 20px;
+	margin-bottom: 20px;
+	size: 250x500;
+}
+a:link{
+  text-decoration: none;
+  background-color: transparent;
+  color:white;
+}
+a:visited{
+  text-decoration: none;
+  background-color: transparent;
+  color:white;
+}
+.clock {
+    position: absolute;
+    left:37%;
+    bottom:82%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 50px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+   
+
+
+}
+.main{
+  margin-top: 2%;
+  margin-left: 2%;
+position: left;
+width:50%;
+height: 80%;
+}
+.main table{
+  border-style: 1px ;
+
+  height: 400px;
+  overflow: scroll;
+}
+/* wygląd głównego elementu - ol */
+      ol {
+        list-style-type:none;
+        padding:0;
+        margin:0;
+        background: linear-gradient(90deg, rgba(0,57,92,0.9122023809523809) 0%, rgba(0,115,172,0.8225665266106442) 50%, rgba(0,164,255,0.6797093837535014) 100%);
+        font-size:18px;
+        height:2em;
+        line-height:2em;
+        text-align:center;
+        float:right;
+        display: block;
+        border-radius: 10px;
+
+      }
+
+      /* wygląd wszystkich elementów - a - znajdujących się w elemencie - ol */
+      ol a {
+        display:block;
+        text-decoration:none;
+        color:#FFF;
+        padding:0 5px;
+        display: block;
+        border-radius: 10px;
+        background: linear-gradient(90deg, rgba(0,57,92,0.9122023809523809) 0%, rgba(0,115,172,0.8225665266106442) 50%, rgba(0,164,255,0.6797093837535014) 100%);
+        z-index: 1;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ol */
+      ol > li {
+        float:left;
+        width:150px;
+        margin-left:1px;
+        background-color:#FDD700;
+        height:2em;
+        display: block;
+        border-radius: 10px;
+      }
+
+      /* wygląd elementu - li - pierwszego dziecka elementu - ol */
+      ol > li:first-child {
+        margin-left:0;
+        display: block;
+        border-radius: 10px;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ol - po najechaniu kursorem myszki na element - li */
+      ol > li:hover {
+        background-color:#EEE;
+        border-radius: 10px;
+      }
+
+      /* wygląd elementu - a - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      ol > li:hover > a {
+        color:#09C;
+        border-radius: 10px;
+      }
+
+      /* wygląd elementu - ul - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      ol > li:hover > ul {
+        display:block;
+        border-radius: 10px;
+      }
+	/* wygląd głównych rozwijanych elementów - ul */
+      ol > li > ul {
+        display:none;
+        list-style-type:none;
+        padding:0;
+        margin:0;
+        border-radius: 10px;
+      }
+
+      /* wygląd elementu - li - w części rozwijanej */
+      ol > li > ul > li {
+        position:relative;
+        background-color:#EEE;
+        border-radius: 10px;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej */
+      ol > li > ul > li > a {
+        border-top:1px solid #FFF;
+        border-radius: 10px;
+      }
+
+      /* wygląd elementu - li - w części rozwijanej, po najechaniu kursorem myszki na dany element - li */
+      ol > li > ul > li:hover {
+        background-color:#DDD;
+        border-radius: 10px;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej, po najechaniu kursorem myszki na element - li */
+      ol > li > ul > li:hover > a {
+        color:#09C;
+        border-radius: 10px;
+      }
+.blok {
+        position:relative;
+        width:500px;
+        height:30px;
+        line-height:30px;
+        margin:0 auto;
+        border:3px solid #DDD;
+        font-size:20px;
+        background-color:#EEE;
+        overflow:hidden;
+      }
+
+      #blok > p {
+        margin:0;
+        white-space:nowrap;
+        animation:przesun 20s linear infinite;
+        -webkit-animation:przesun 20s linear infinite;
+        color:white;
+        overflow:hidden;
+      }
+      @-webkit-keyframes przesun{
+        0% { -webkit-transform:translateX(0); padding-left:110%; }
+        100% { -webkit-transform:translateX(-100%);padding-left: 110%;  }
+      }
